@@ -79,7 +79,7 @@ int main()
     cout << __TIME__ << endl;
     
     #ifndef CI
-        system("pause");
+        //system("pause");
     #endif
 
     return 0;
