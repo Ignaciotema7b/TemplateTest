@@ -38,7 +38,10 @@ jobs:
     - name: build exe
       if: steps.read_config.outputs.LOG_PROTO == 'true'
       run: |
-        msbuild "$env:SLN_NAME.sln" ` /p:Configuration=z_Proto_Release ` /p:PreprocessorDefinitions='z_Proto_Release;%(PreprocessorDefinitions)' ` /p:AdditionalOptions="/D CI"
+        msbuild "$env:SLN_NAME.sln" `
+          /p:Configuration=z_Proto_Release `
+          /p:Platform=x64 `
+          /p:PreprocessorDefinitions="z_Proto_Release;CI"
 
 
     - name: ejec exe and generate plays
