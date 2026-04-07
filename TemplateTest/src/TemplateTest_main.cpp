@@ -77,8 +77,10 @@ int main()
 
     cout << __DATE__ << endl;
     cout << __TIME__ << endl;
-
-    system("PAUSE");
+    
+    #ifndef CI
+        system("pause");
+    #endif
 
     return 0;
 }
