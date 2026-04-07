@@ -41,7 +41,8 @@ jobs:
         msbuild "$env:SLN_NAME.sln" `
           /p:Configuration=z_Proto_Release `
           /p:Platform=x64 `
-          /p:AdditionalOptions="/D CI"
+          /p:ClCompile.PreprocessorDefinitions="CI"
+
 
 
     - name: ejec exe and generate plays
