@@ -1,7 +1,7 @@
 #pragma once
 #include "../CommonLib/include/Game_statistics.h"
 
-class GameTemplate_stats :
+class TemplateTest_stats :
     public Game_statistics
 {
 public:

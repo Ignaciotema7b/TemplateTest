@@ -1,6 +1,6 @@
-#include "GameTemplate_config.h"
+#include "TemplateTest_config.h"
 
-void GameTemplate_config::init(Game_info info)
+void TemplateTest_config::init(Game_info info)
 {
 	Slot_config::init(info);
 
