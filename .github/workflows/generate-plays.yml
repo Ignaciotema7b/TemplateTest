@@ -41,7 +41,6 @@ jobs:
         msbuild "$env:SLN_NAME.sln" `
           /p:Configuration=z_Proto_Release `
           /p:Platform=x64 `
-          /p:ClCompile.PreprocessorDefinitions="CI"
 
 
 
@@ -50,7 +49,7 @@ jobs:
       run: |
         $exePath = ".\bin\x64\z_Proto_Release\$env:SLN_NAME.exe"
         Copy-Item $exePath ".\$env:SLN_NAME\"
-        & ".\$env:SLN_NAME\$env:SLN_NAME.exe"
+        cmd /c "echo.|$env:SLN_NAME\$env:SLN_NAME.exe"
 
 
     - name: Setup Python
