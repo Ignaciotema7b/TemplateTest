@@ -62,6 +62,6 @@ jobs:
     
     - name: Run python script
       if: steps.read_config.outputs.LOG_PROTO == 'true'
-      run: python "./$env:SLN_NAME/game/proto/playsformatterALLJSON.py"
+      run: python "./game/proto/playsformatterALLJSON.py"
 
         
