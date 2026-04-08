@@ -64,6 +64,11 @@ jobs:
       if: steps.read_config.outputs.LOG_PROTO == 'true'
       run: |
           cd "./$env:SLN_NAME"
+
+          ls .
+          ls "./game/"
+          ls "./game/proto/"
+          
           python "./game/proto/playsformatterALLJSON.py"
 
         
