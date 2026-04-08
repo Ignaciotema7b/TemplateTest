@@ -23,13 +23,18 @@ using namespace std;
 
 #include "TemplateTest.h"
 
-#ifdef CI
-#pragma message("CI macro is active")
-#endif
+
 
 
 int main()
 {
+
+#ifdef CI
+    std::cout << "MODO CI ACTIVO" << std::endl;
+#else
+    std::cout << "MODO LOCAL / NORMAL" << std::endl;
+#endif
+    
     TemplateTest* game = new TemplateTest() ;
 
     string game_name = "TemplateTest";
