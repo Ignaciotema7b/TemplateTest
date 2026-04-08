@@ -86,6 +86,7 @@ int main()
         system("pause");
     #endif;
 
+    cout << "llegué al final" << endl;
     return 0;
 }
 
