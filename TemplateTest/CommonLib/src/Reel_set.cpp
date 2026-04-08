@@ -134,7 +134,9 @@ void Reel_set::force_stops(vector<unsigned> stops_param)
 	if ((int)stops_param.size() != number_of_reels)
 	{
 		printf("Warning: forcing stops, size of parameter 'stops' doesn't match number of reels\n\n");
-		system("PAUSE");
+		   #ifndef CI
+        system("pause");
+    #endif;
 	}
 	else
 	{

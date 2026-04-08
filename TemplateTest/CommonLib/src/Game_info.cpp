@@ -13,14 +13,16 @@ void Game_info::load_info(string path)
     {
         cout << "Warning: info.csv not found...\n";
         cout << path<<endl;
-        system("PAUSE");
+           #ifndef CI
+        system("pause");
+    #endif;
         //return 0LLU;
     }
 
-    string str; //Acá voy a guardar lo que leo del archivo.
-    getline(archivo, str, '\n');//La función getline lee con tres parámetros(de que archivo,donde lo guardo,hasta donde leo).
+    string str; //Acï¿½ voy a guardar lo que leo del archivo.
+    getline(archivo, str, '\n');//La funciï¿½n getline lee con tres parï¿½metros(de que archivo,donde lo guardo,hasta donde leo).
 
-    //La función str.find(",") lee el str y guarda el lugar donde encuentre una coma.
+    //La funciï¿½n str.find(",") lee el str y guarda el lugar donde encuentre una coma.
     string campo = str.substr(0, str.find(",")); //Genero un substr, asta antes de la coma. Ese es el campo.
 
 

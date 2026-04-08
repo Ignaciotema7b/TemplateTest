@@ -2,20 +2,6 @@
 #include <filesystem>
 
 
-#ifdef CI  // Definida en CI
-#include <cstring>  // para strcmp
-
-inline int pause_override(const char* cmd) {
-    if (cmd && strcmp(cmd, "pause") == 0) {
-        return 0;  // Ignora el pause
-    }
-    return std::system(cmd); // Llama al system normal para otros comandos
-}
-
-#define system(cmd) pause_override(cmd)
-
-#endif
-
 void TemplateTest::generate_json(Game_info info)
 {
 	json j;

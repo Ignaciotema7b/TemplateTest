@@ -131,7 +131,9 @@ void rnd_log::log_total_win(unsigned long long total_win, vector<vector<int>> sc
 		fclose(file_log_plays);
 		fclose(file_rnd_log);
 		cout << "log generated" << endl;
-		system("PAUSE");
+		   #ifndef CI
+        system("pause");
+    #endif;
 		exit(1);
 	}
 }
