@@ -50,9 +50,7 @@ jobs:
         $exePath = ".\bin\x64\z_Proto_Release\$env:SLN_NAME.exe"
         Copy-Item $exePath ".\$env:SLN_NAME\"
 
-        $env:PAUSE = ""
-
-        cmd /c "start /b $env:SLN_NAME\$env:SLN_NAME.exe"
+        & "$env:SLN_NAME\$env:SLN_NAME.exe"
 
     - name: Setup Python
       if: steps.read_config.outputs.LOG_PROTO == 'true'
