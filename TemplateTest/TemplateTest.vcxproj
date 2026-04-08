@@ -646,10 +646,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets'))" />
   </Target>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='z_Proto_Release|x64'">
-    <ClCompile>
-      <PreprocessorDefinitions>NDEBUG;CI;WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary> 
-      </ClCompile>
-  </ItemDefinitionGroup>
+
 </Project>
