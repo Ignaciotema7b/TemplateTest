@@ -38,7 +38,10 @@ jobs:
     - name: build exe
       if: steps.read_config.outputs.LOG_PROTO == 'true'
       run: |
-        msbuild "$env:SLN_NAME.sln" /p:Configuration=z_Proto_Release /p:Platform=x64 /p:ClCompile.PreprocessorDefinitions="CI;%(ClCompile.PreprocessorDefinitions)"
+        msbuild "$env:SLN_NAME.sln" `
+          /p:Configuration=z_Proto_Release `
+          /p:Platform=x64 `
+          /p:ExtraDefinitions="CI"
 
 
 
