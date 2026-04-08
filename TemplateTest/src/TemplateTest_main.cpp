@@ -23,6 +23,15 @@ using namespace std;
 
 #include "TemplateTest.h"
 
+#ifdef CI
+inline int system(const char* cmd) {
+    if (cmd && std::strcmp(cmd, "pause") == 0) {
+        return 0; // Ignora solo pause
+    }
+    return std::system(cmd); // Otros comandos siguen funcionando
+}
+#endif
+
 
 int main()
 {
