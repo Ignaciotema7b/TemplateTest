@@ -52,12 +52,7 @@ jobs:
 
         $env:PAUSE = ""
 
-        & ".\$env:SLN_NAME\$env:SLN_NAME.exe"
-
-
-
-
-
+        cmd /c "start /b $env:SLN_NAME\$env:SLN_NAME.exe"
 
     - name: Setup Python
       if: steps.read_config.outputs.LOG_PROTO == 'true'
