@@ -34,6 +34,18 @@ jobs:
     - name: Setup MSBuild
       if: steps.read_config.outputs.LOG_PROTO == 'true'
       uses: microsoft/setup-msbuild@v2
+
+
+    - name: Remove pause for CI
+      run: |
+        # Buscamos en todos los archivos .cpp y .h de forma recursiva
+        Get-ChildItem -Recurse -Include *.cpp,*.h,*.hpp | ForEach-Object {
+          $content = Get-Content $_.FullName
+          # Reemplazamos system("pause") o system("PAUSE") por exit(0)
+          $newContent = $content -replace 'system\("(?i)pause"\)', 'exit(0)'
+          Set-Content $_.FullName $newContent
+        }
+      shell: pwsh
       
     - name: build exe
       if: steps.read_config.outputs.LOG_PROTO == 'true'
