@@ -13,9 +13,7 @@ void Game_info::load_info(string path)
     {
         cout << "Warning: info.csv not found...\n";
         cout << path<<endl;
-           #ifndef CI
-        system("pause");
-    #endif;
+       system("pause");
         //return 0LLU;
     }
 

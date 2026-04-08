@@ -82,9 +82,7 @@ int main()
     cout << __DATE__ << endl;
     cout << __TIME__ << endl;
     
-    #ifndef CI
-        system("pause");
-    #endif;
+system("pause");
 
     cout << "llegué al final" << endl;
     return 0;

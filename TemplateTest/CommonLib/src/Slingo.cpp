@@ -107,9 +107,7 @@ void Slingo::load_symbols(string config_folder)
 		if ((int)str.size() > 3)
 		{
 			printf("Warning: length of short name for symbol must be 3 at most\n");
-			   #ifndef CI
-        system("pause");
-    #endif;
+			   system("pause");
 		}
 
 		//Init variable
@@ -130,9 +128,7 @@ void Slingo::load_symbols(string config_folder)
 			if (id != stoi(str))
 			{
 				printf("Warning: symbol IDs must be increasing...\n");
-				   #ifndef CI
-        system("pause");
-    #endif;
+				   system("pause");
 			}
 
 			this->symbols_list.push_back(s);

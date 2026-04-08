@@ -18,9 +18,7 @@ void Weighted_values::init(string path)
 	{
 		cout << "***********  Warning:  **********************\n "; 
 		cout << "Total weight for " << name << " is more than 30000" << endl;
-		   #ifndef CI
-        system("pause");
-    #endif;
+		   system("pause");
 	}*/
 
 
@@ -128,9 +126,7 @@ int Weighted_values::next_value()
 	{
 		cout << "Error in draw without replacement: values should be shuffled/drawn again, last value was reached...  (" 
 			<< name << ")"  << endl;
-		   #ifndef CI
-        system("pause");
-    #endif;
+		   system("pause");
 	}
 
 	return 0;
