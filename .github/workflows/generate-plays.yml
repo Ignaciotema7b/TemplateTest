@@ -49,9 +49,12 @@ jobs:
       run: |
         $exePath = ".\bin\x64\z_Proto_Release\$env:SLN_NAME.exe"
         Copy-Item $exePath ".\$env:SLN_NAME\"
-        $exe = ".\$env:SLN_NAME\$env:SLN_NAME.exe"
-    
-        cmd /c "(for /l %i in (1,1,1000) do @echo.) | $exe"
+
+        $env:PAUSE = ""
+
+        & ".\$env:SLN_NAME\$env:SLN_NAME.exe"
+
+
 
 
 
