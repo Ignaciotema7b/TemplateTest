@@ -23,6 +23,9 @@ using namespace std;
 
 #include "TemplateTest.h"
 
+#ifdef CI
+#pragma message("CI macro is active")
+#endif
 
 
 int main()
